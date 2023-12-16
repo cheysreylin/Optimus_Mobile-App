@@ -28,13 +28,12 @@ class MeduimText extends StatelessWidget {
       padding: padding,
       child: Text(
         text,
-        
         textAlign: textAlign,
         overflow: textOverflow,
         style: TextStyle(
           color: colors,
-          fontSize: size,
-          
+          fontSize: 20,
+          fontWeight: FontWeight.w700
         ),
       ),
     );

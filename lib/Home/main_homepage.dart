@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:optimus_mobile_app/ABoutUs/main_aboutus.dart';
+import 'package:optimus_mobile_app/AboutProduct/main_aboutproduct.dart';
 import 'package:optimus_mobile_app/Home/Body/Introduction.dart';
 import 'package:optimus_mobile_app/Home/Footer/footer.dart';
 import 'package:optimus_mobile_app/Home/Header/Sliders_MenuBar/slider_menu_bar.dart';
+import 'package:optimus_mobile_app/OurCustomer/main_customer.dart';
+import 'package:optimus_mobile_app/Partnerships/main_partnership.dart';
 
 class MainHomePage extends StatefulWidget {
   const MainHomePage({super.key});
@@ -31,32 +35,57 @@ class _AppControllerState extends State<MainHomePage> {
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-          children: const [
-            DrawerHeader(
+          children: [
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 46, 99, 143),
               ),
-              child: Text("Drawer Header"),
+              child: Text("Welcome to OPTIMUS-Automate your workload"),
             ),
             ListTile(
-              leading: Icon(Icons.home),
-              title: Text("Home"),
+              leading: const Icon(Icons.home),
+              title: const Text("Home"),
+              onTap:() {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const MainHomePage(),
+                ));
+              },
             ),
             ListTile(
               leading: Icon(Icons.verified_user_outlined),
               title: Text("About US"),
+              onTap:() {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const MainAboutUs(),
+                ));
+              },
             ),
             ListTile(
               leading: Icon(Icons.production_quantity_limits),
               title: Text("Our Products"),
+              onTap:() {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const MainAboutProduct(),
+                ));
+              },
             ),
             ListTile(
               leading: Icon(Icons.people),
               title: Text("Partnerships"),
+              onTap:() {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const MainPartnership(),
+                ));
+              },
             ),
             ListTile(
               leading: Icon(Icons.supervised_user_circle_sharp),
               title: Text("Our Customers"),
+              onTap:() {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const MainCustomer(),
+                ));
+              },
             )
           ],
         ),

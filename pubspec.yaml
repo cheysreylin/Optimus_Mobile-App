@@ -68,6 +68,7 @@ flutter:
     - assets/images/LPRS01.jpg
     - assets/whyus/
     - assets/socialMediaLogo/
+    - assets/members/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
